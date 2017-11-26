@@ -6,14 +6,41 @@
     <title>Bootstrap Basics</title>
 </head>
 <body>
-    <h1>Bootsrap basics</h1>
-    <button class="btn btn-success btn-xs" type="button" name="button">
-      Click Me!</button>
-    <a href="#" class="btn btn-info btn-lg">BoostrapDocs</a>
-    <button class="btn btn-success btn-xs active" type="button" name="button">
-      Click Me!</button>
-    <button class="btn btn-success btn-xs" type="button" name="button"
-        disabled="disabled">
+    <!-- Elemento de barra de navegacion de Bootstrap-->
+    <!-- Para crear el elemento que resalta mayormente de la barra en general HOME-->
+    <nav class="navbar navbar-default">
+        <div class = "navbar-header">
+            <a href="#" class="navbar-brand">Koffee</a>
+        </div>
+        <!-- Elementos que aparecen tambien en la barra de navegacion (a la izquierda) --> 
+        <div class="nav navbar-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+        <!-- Elementos que aparecen tambien en la barra de navegacion (a la derecha) -->
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Log in</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+      <div class="jumbotron">
+          <h1>This is a Jumbotron</h1>
+          <p>ipsum asdf asdf e reare rdfdf</p>
+          <button class="btn btn-lg"type="button" name="button">Soy
+          un Lindo boton XDXD</button>
+      </div>
+      <h1>Bootsrap basics</h1>
+      <button class="btn btn-success btn-xs" type="button" name="button">
         Click Me!</button>
+      <a href="#" class="btn btn-info btn-lg">BoostrapDocs</a>
+      <button class="btn btn-success btn-xs active" type="button" name="button">
+        Click Me!</button>
+      <button class="btn btn-success btn-xs" type="button" name="button"
+          disabled="disabled">
+          Click Me!</button>
+    </div>
 </body>
 </html>
