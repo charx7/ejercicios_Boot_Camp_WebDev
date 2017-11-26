@@ -1,0 +1,7 @@
+img {
+    width: 30%;
+    /* Para quitar el espacio que se crea por default en html  */
+    float: left;
+    /* Para especificar cuanto espacio blanco se usa entre imagen */
+    margin: 1.66%;
+}
