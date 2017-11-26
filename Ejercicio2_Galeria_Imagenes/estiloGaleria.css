@@ -5,3 +5,15 @@ img {
     /* Para especificar cuanto espacio blanco se usa entre imagen */
     margin: 1.66%;
 }
+p {
+    font-family: Raleway;
+    margin-left: 1.66%;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    /* Para hacer una linea que divida el parrafo y salga como separador en la pagina web */
+    border-bottom: 3px solid #f1f1f1;
+    width: 30%;
+    padding-bottom: 20px;
+
+}
