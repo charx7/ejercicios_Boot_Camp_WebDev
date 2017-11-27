@@ -1,0 +1,12 @@
+#contenido {
+    text-align: center;
+    padding-top: 25%;
+    color: white;
+}
+
+body{
+    background: url(https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=2001&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-size: cover;
+    background-position: center; 
+    font-family: Lato;
+}
