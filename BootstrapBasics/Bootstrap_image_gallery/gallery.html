@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+</head>
+<body>
+    <!-- Elemento de barra de navegacion de Bootstrap-->
+    <!-- Para crear el elemento que resalta mayormente de la barra en general HOME-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+            <!-- Codigo del boton que aparece si hacemos collapse a los elementos del navbar -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraDeNavegacion" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+            </button>
+    
+            <div class="container"> <!-- Contenedor para que no se pegue todo a las esquinas -->
+                <div class = "navbar-header">
+                    <a href="#" class="navbar-brand">Art Gallery</a>
+                </div>
+                <!-- Clases Para hacer colapsar a la barra de navegacion de forma responsiva -->
+                <div class="collapse navbar-collapse" id = 'barraDeNavegacion'>
+                    <!-- Elementos que aparecen tambien en la barra de navegacion (a la izquierda) --> 
+                    <div class="nav navbar-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </div>
+                    <!-- Elementos que aparecen tambien en la barra de navegacion (a la derecha) -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Log in</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                The Image Gallery
+            </h1>
+            <p>
+                An image gallery example that contains a lot of images XDXDXD
+            </p>
+        </div>
+        <!-- Ahora van los elementos del grid para el despliegue de las imagenes -->
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="https://source.unsplash.com/cPF2nlWcMY4">
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1509886745582-64bd84c3560e">
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1509008267584-a46533660a05">
+                </div>
+            </div>           
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- Javascript de Boostrap y Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
