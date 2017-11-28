@@ -1,7 +1,8 @@
-// Seleccionamos los objetos de botones de los jugadores y de reset
+// Seleccionamos los objetos de botones de los jugadores y de reset y del input de number
 var butonPlayer1 = document.getElementById("botonJugador1");
 var butonPlayer2 = document.getElementById("botonJugador2");
 var botonReset = document.getElementById("botonResetear");
+var inputMaximo = document.getElementById("maximoScore");
 
 // Variables Globales de puntaje
 var puntajeJugador1 = 0;
@@ -79,3 +80,8 @@ botonReset.addEventListener("click", function(){
     
 });
 
+// Cambia el valor maximo del juego
+document.querySelector("input").addEventListener("click", function(){
+    puntajeMaximo = Number(document.querySelector("input").value);
+    inputMaximo.innerHTML = puntajeMaximo;
+});
