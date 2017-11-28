@@ -1,12 +1,5 @@
 // Establecemos un arreglo con los colores iniciales de los cuadrados
-var colores = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 0, 0)",
-    "rgb(255, 0, 0)",
-    "rgb(255, 200, 0)",
-    "rgb(255, 0, 0)",
-    "rgb(255, 0, 0)"
-];
+var colores = generaColoresRandom(6); 
 
 // Guardamos todos los elementos del objeto de HTML seleccionado
 var arregloCuadrados = document.querySelectorAll(".cuadrado");
@@ -47,6 +40,7 @@ function cambiarColores (color) {
     }
 }
 
+// Funcion que genera el color ganador randomente
 function colorRandom() {
     // Escoge un numero al azar entre 0 y el tamanio del arreglo de los colores porque varia en los modos facil y normal
     var random = Math.floor(Math.random() * colores.length);
@@ -54,7 +48,25 @@ function colorRandom() {
     return colores[random];
 }
 
+// Funcion que crea el arreglo de colores a desplegar de manera random
+function generaColoresRandom(numero) {
+    // Hacer un arreglo y aniadir numero de colores random al arreglo
+    var arr= [];
+    for(var i = 0; i < numero; i++) {
+        // Genera la cadena a vaciar en el arreglo vacio y lo pushea
+        arr.push(generarColor());
+    }
+    // Regresa el arreglo generado random XD
+    return arr;
+}
 
-
-
+// funcion que genera la cadena de colores random
+function generarColor () {
+    // Escoger red entre 0 y 255 y asi
+    var rojo = Math.floor(Math.random() * 256);
+    var verde = Math.floor(Math.random() * 256);
+    var azul = Math.floor(Math.random() * 256);
+    var colorFinal = "rgb(" + rojo + ", " + verde + ", " + azul + ")";
+    return colorFinal; 
+}
 
