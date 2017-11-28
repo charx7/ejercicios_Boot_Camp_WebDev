@@ -22,9 +22,14 @@ butonPlayer1.addEventListener("click", function(){
         // Aniade 1 al puntaje del jugador 1
         puntajeJugador1++;
 
-        // Hace una variable de cadena que indique el puntaje para pasarsela al HTML de h1
-        var puntajeGlobal = puntajeJugador1 + " to " + puntajeJugador2;
-        document.querySelector("h1").innerHTML = puntajeGlobal;
+        // Le pasa el puntajeJugador1 a la clase de puntaje1 del span en el h1
+        document.querySelector("#puntaje1").innerHTML = puntajeJugador1;
+
+        // Prende la clase de ganador (color verde en el score)
+        if (puntajeJugador1 == puntajeMaximo) {
+            document.querySelector("#puntaje1").classList.toggle('ganador');
+            juegoAcabado = true;
+        }
     }
 });
 
@@ -37,23 +42,40 @@ butonPlayer2.addEventListener("click", function(){
         // Aniade 1 al puntaje del jugador 1
         puntajeJugador2++;
 
-        // Hace una variable de cadena que indique el puntaje para pasarsela al HTML de h1
-        var puntajeGlobal = puntajeJugador1 + " to " + puntajeJugador2;
-        document.querySelector("h1").innerHTML = puntajeGlobal;
+        // Le pasa el puntajeJugador2 a la clase de puntaje2 del span en el h1
+        document.querySelector("#puntaje2").innerHTML = puntajeJugador2;
+
+        // Prende la clase de ganador (color verde en el score)
+        if (puntajeJugador2 == puntajeMaximo) {
+            document.querySelector("#puntaje2").classList.toggle('ganador');
+            juegoAcabado = true;
+        }
     }
 });
 
 
 
 botonReset.addEventListener("click", function(){
+    // Apaga las clases de puntaje si estas estan activadas
+    if(juegoAcabado == true) {
+        if(puntajeJugador1 == puntajeMaximo){
+            document.querySelector("#puntaje1").classList.toggle('ganador');
+        } else {
+            document.querySelector("#puntaje2").classList.toggle('ganador');
+        }
+    }
+
     // Hace que las 2 variables de puntaje sean 0
     puntajeJugador1 = 0;
     puntajeJugador2 = 0;
 
     // Transforma el HTML de h1 con eso
-    document.querySelector("h1").innerText = "0 to 0";
+    document.querySelector("#puntaje1").innerHTML = "0";
+    document.querySelector("#puntaje2").innerHTML = "0";
 
     // Hace que otra vez se pueda jugar con los botones XD
     juegoAcabado = false;
+
+    
 });
 
