@@ -31,6 +31,8 @@ botonReset.addEventListener('click', function(){
     for(var i = 0; i < arregloCuadrados.length; i++) {
         arregloCuadrados[i].style.backgroundColor = colores [i];
     }
+    // Cambia el color del h1 a otra vez el default
+    tituloPagina.style.backgroundColor = "skyblue";
 });
 
 // Cambiamos el color de cada cuadrado de acuerdo al color del arreglo de colores
@@ -46,6 +48,9 @@ for(var i = 0; i<arregloCuadrados.length; i++) {
             // Cambia los colores de todos los cuadrados haciendo call a la funcion cambiarColores
             cambiarColores(colorGanador);
             tituloPagina.style.backgroundColor = colorGanador;
+            // Cambia el titulo del boton
+            botonReset.textContent = "Jugar Otra Vez?"
+
         } else {
             // Cambia el color al del body para eliminarlo y despliega Intenta otra vez
             this.style.backgroundColor = '#232323';
