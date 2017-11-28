@@ -1,0 +1,22 @@
+.cuadrado {
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: pink;
+    float: left;
+    margin: 1.66%; 
+}
+
+body {
+    background-color: #232323;
+}
+
+.contenerdorCuadrados {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.tituloJuego {
+    text-align: center;
+    color: white;
+    background-color: skyblue;
+}
