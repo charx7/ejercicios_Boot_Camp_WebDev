@@ -12,7 +12,7 @@ var colores = [
 var arregloCuadrados = document.querySelectorAll(".cuadrado");
 
 // Valor escogido para que sea el color a elegir como ganador
-var colorGanador = colores[3];
+var colorGanador = colorRandom();
 // Selecciona el color para transformar el Span del html y lo procesa
 var colorDesplegado = document.getElementById("desplegadoColor");
 colorDesplegado.textContent = colorGanador;
@@ -28,8 +28,10 @@ for(var i = 0; i<arregloCuadrados.length; i++) {
         // Toma la propiedad de backgroundcolor del cuadrado al que se le dio click
         var colorClickeado = this.style.backgroundColor;
         if(colorClickeado === colorGanador) {
-            alert('auch XD');
+            // Despliega mensaje de que escogiste el color ganador
             mensajeDesplegar.textContent = 'Ganastee';
+            // Cambia los colores de todos los cuadrados haciendo call a la funcion cambiarColores
+            cambiarColores(colorGanador);
         } else {
             // Cambia el color al del body para eliminarlo y despliega Intenta otra vez
             this.style.backgroundColor = '#232323';
@@ -37,5 +39,22 @@ for(var i = 0; i<arregloCuadrados.length; i++) {
         }
     });
 }
+
+function cambiarColores (color) {
+    // Ciclar sobre todos los elementos de cuadrado para cambiar el color al correcto
+    for(var i=0; i< arregloCuadrados.length; i++) {
+        arregloCuadrados[i].style.backgroundColor = color;
+    }
+}
+
+function colorRandom() {
+    // Escoge un numero al azar entre 0 y el tamanio del arreglo de los colores porque varia en los modos facil y normal
+    var random = Math.floor(Math.random() * colores.length);
+    // Regresa el elemento del arreglo de colores que fue generado con el indice al azar
+    return colores[random];
+}
+
+
+
 
 
