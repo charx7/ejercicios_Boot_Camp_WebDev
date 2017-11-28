@@ -10,15 +10,18 @@ var puntajeJugador2 = 0;
 // Variable que define puntaje maximo
 var puntajeMaximo = 5;
 
+// Variable que define el fin del juego
+var juegoAcabado = false;
+
 butonPlayer1.addEventListener("click", function(){
-    //alert("click");
-    // Aniade 1 al puntaje del jugador 1
-    puntajeJugador1++;
 
     // Condicion de puntaje maximo
-    if(puntajeJugador1 > puntajeMaximo) {
-        puntajeJugador1 = puntajeMaximo;
+    if(puntajeJugador1 == puntajeMaximo || juegoAcabado == true) {
+        juegoAcabado = true;
     } else {
+        // Aniade 1 al puntaje del jugador 1
+        puntajeJugador1++;
+
         // Hace una variable de cadena que indique el puntaje para pasarsela al HTML de h1
         var puntajeGlobal = puntajeJugador1 + " to " + puntajeJugador2;
         document.querySelector("h1").innerHTML = puntajeGlobal;
@@ -26,14 +29,14 @@ butonPlayer1.addEventListener("click", function(){
 });
 
 butonPlayer2.addEventListener("click", function(){
-    //alert("click");
-    // Aniade 1 al puntaje del jugador 1
-    puntajeJugador2++;
 
     // Condicion de puntaje maximo
-    if(puntajeJugador2 > puntajeMaximo) {
-        puntajeJugador2 = puntajeMaximo;
+    if(puntajeJugador2 == puntajeMaximo || juegoAcabado == true) {
+        juegoAcabado = true;
     } else {
+        // Aniade 1 al puntaje del jugador 1
+        puntajeJugador2++;
+
         // Hace una variable de cadena que indique el puntaje para pasarsela al HTML de h1
         var puntajeGlobal = puntajeJugador1 + " to " + puntajeJugador2;
         document.querySelector("h1").innerHTML = puntajeGlobal;
@@ -49,5 +52,8 @@ botonReset.addEventListener("click", function(){
 
     // Transforma el HTML de h1 con eso
     document.querySelector("h1").innerText = "0 to 0";
+
+    // Hace que otra vez se pueda jugar con los botones XD
+    juegoAcabado = false;
 });
 
