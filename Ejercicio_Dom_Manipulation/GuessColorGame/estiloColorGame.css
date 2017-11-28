@@ -22,5 +22,11 @@ body {
 }
 
 #mensaje {
-    color: white;
+    color: black;
+}
+
+#raya {
+    background-color: white;
+    text-align: center;
+    height: 30px;
 }

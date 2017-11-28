@@ -16,6 +16,23 @@ var mensajeDesplegar = document.querySelector('#mensaje');
 // Selecciona el h1 para cambarle el color de background
 var tituloPagina = document.querySelector('h1');
 
+// Selecciona el boton de reseteo del juego
+var botonReset = document.querySelector('#reset');
+
+// EventListenerde click
+
+botonReset.addEventListener('click', function(){
+    // Genera nuevos colores
+    colores = generaColoresRandom(6);
+    // Escoge un nuevo color ganador del arrelo y lo despliega
+    colorGanador = colorRandom();
+    colorDesplegado.textContent = colorGanador;
+    // Cambia los colores de los cuadrados del arreglo
+    for(var i = 0; i < arregloCuadrados.length; i++) {
+        arregloCuadrados[i].style.backgroundColor = colores [i];
+    }
+});
+
 // Cambiamos el color de cada cuadrado de acuerdo al color del arreglo de colores
 for(var i = 0; i<arregloCuadrados.length; i++) {
     arregloCuadrados[i].style.backgroundColor = colores[i];
