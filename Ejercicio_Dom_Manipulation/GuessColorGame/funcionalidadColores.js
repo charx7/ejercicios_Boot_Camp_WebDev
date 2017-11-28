@@ -13,6 +13,9 @@ colorDesplegado.textContent = colorGanador;
 // Seleccionamos span de texto que indicara al usuario si escogieron bien el color o no
 var mensajeDesplegar = document.querySelector('#mensaje');
 
+// Selecciona el h1 para cambarle el color de background
+var tituloPagina = document.querySelector('h1');
+
 // Cambiamos el color de cada cuadrado de acuerdo al color del arreglo de colores
 for(var i = 0; i<arregloCuadrados.length; i++) {
     arregloCuadrados[i].style.backgroundColor = colores[i];
@@ -25,6 +28,7 @@ for(var i = 0; i<arregloCuadrados.length; i++) {
             mensajeDesplegar.textContent = 'Ganastee';
             // Cambia los colores de todos los cuadrados haciendo call a la funcion cambiarColores
             cambiarColores(colorGanador);
+            tituloPagina.style.backgroundColor = colorGanador;
         } else {
             // Cambia el color al del body para eliminarlo y despliega Intenta otra vez
             this.style.backgroundColor = '#232323';
