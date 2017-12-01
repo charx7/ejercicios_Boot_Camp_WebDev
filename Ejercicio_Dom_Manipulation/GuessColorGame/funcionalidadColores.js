@@ -125,6 +125,25 @@ botonEZ.addEventListener('click', function(){
 });
 
 botonHARD.addEventListener('click', function(){
+    // Codigo para mostrar background con un color de acurdo al modo elegido
     this.classList.add('seleccionado');
     botonEZ.classList.remove('seleccionado');
+    
+    // Genera nuevos Colores en este caso 6
+    colores = generaColoresRandom(6);
+    colorGanador = colorRandom();
+    colorDesplegado.textContent = colorGanador;
+
+    // Desplegado de los nuevos colores elegidos
+    for(var i = 0; i < arregloCuadrados.length; i++){
+        // Cambia el color de los 6 cuadrados
+        arregloCuadrados[i].style.backgroundColor = colores[i];
+        // Ejecuta esta linea si existe un siguiente color a mostrar
+        if(arregloCuadrados[i].style.display == 'none') { 
+            // habilita los cuadrados que fueron desactivados
+            arregloCuadrados[i].style.display = 'block'; 
+        } 
+
+    }
+
 });
