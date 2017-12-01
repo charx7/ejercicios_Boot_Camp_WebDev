@@ -1,5 +1,8 @@
+// variable que lleva la cuenta de cuantos cuadrados tenemos
+var numeroDeCuadrados = 6;
+
 // Establecemos un arreglo con los colores iniciales de los cuadrados
-var colores = generaColoresRandom(6); 
+var colores = generaColoresRandom(numeroDeCuadrados); 
 
 // Guardamos todos los elementos del objeto de HTML seleccionado
 var arregloCuadrados = document.querySelectorAll(".cuadrado");
@@ -20,10 +23,9 @@ var tituloPagina = document.querySelector('h1');
 var botonReset = document.querySelector('#reset');
 
 // EventListenerde click
-
 botonReset.addEventListener('click', function(){
     // Genera nuevos colores
-    colores = generaColoresRandom(6);
+    colores = generaColoresRandom(numeroDeCuadrados);
     // Escoge un nuevo color ganador del arrelo y lo despliega
     colorGanador = colorRandom();
     colorDesplegado.textContent = colorGanador;
@@ -101,10 +103,13 @@ var botonEZ = document.querySelector("#ezpz");
 var botonHARD = document.querySelector("#hardgame");
 
 botonEZ.addEventListener('click', function(){
+    // Establece el numero de Cuadrados a 3
+    numeroDeCuadrados = 3;
+
     this.classList.add('seleccionado');
     botonHARD.classList.remove('seleccionado');
     // Genera nuevos Colores
-    colores = generaColoresRandom(3);
+    colores = generaColoresRandom(numeroDeCuadrados);
     colorGanador = colorRandom();
     colorDesplegado.textContent = colorGanador;
 
@@ -125,12 +130,15 @@ botonEZ.addEventListener('click', function(){
 });
 
 botonHARD.addEventListener('click', function(){
+    // Genera nuevos colores
+    numeroDeCuadrados = 6;
+
     // Codigo para mostrar background con un color de acurdo al modo elegido
     this.classList.add('seleccionado');
     botonEZ.classList.remove('seleccionado');
     
     // Genera nuevos Colores en este caso 6
-    colores = generaColoresRandom(6);
+    colores = generaColoresRandom(numeroDeCuadrados);
     colorGanador = colorRandom();
     colorDesplegado.textContent = colorGanador;
 
