@@ -24,6 +24,9 @@ var botonReset = document.querySelector('#reset');
 
 // EventListenerde click
 botonReset.addEventListener('click', function(){
+    // Hace que el span de correcto o no desaparezca
+    mensajeDesplegar.textContent = '';
+
     // Genera nuevos colores
     colores = generaColoresRandom(numeroDeCuadrados);
     // Escoge un nuevo color ganador del arrelo y lo despliega
