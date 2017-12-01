@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 }
 
-.completed {
+.completado {
     color: gray;
     text-decoration: line-through;
 }
