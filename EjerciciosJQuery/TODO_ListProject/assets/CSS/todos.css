@@ -3,9 +3,14 @@ body {
 }
 
 #contenedorLista {
-    background: grey;
+    border: 2px solid grey;
     /* Se le da un ancho maximo al contenedor de div*/
     width: 360px;
     /* Se centra dandole un margen de 0 en top y bottom y auto izquierda/derecha */
     margin: 0 auto;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
 }
