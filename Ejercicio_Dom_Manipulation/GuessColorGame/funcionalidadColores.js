@@ -55,7 +55,7 @@ for(var i = 0; i<arregloCuadrados.length; i++) {
 
         } else {
             // Cambia el color al del body para eliminarlo y despliega Intenta otra vez
-            this.style.backgroundColor = '#232323';
+            this.style.backgroundColor = '#2323';
             mensajeDesplegar.textContent = 'Intenta Otra vez XD';
         }
     });
