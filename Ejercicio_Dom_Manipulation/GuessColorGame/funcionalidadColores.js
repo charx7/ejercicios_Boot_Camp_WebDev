@@ -96,3 +96,35 @@ function generarColor () {
     return colorFinal; 
 }
 
+// Funcion de los botones de EZ o HARD
+var botonEZ = document.querySelector("#ezpz");
+var botonHARD = document.querySelector("#hardgame");
+
+botonEZ.addEventListener('click', function(){
+    this.classList.add('seleccionado');
+    botonHARD.classList.remove('seleccionado');
+    // Genera nuevos Colores
+    colores = generaColoresRandom(3);
+    colorGanador = colorRandom();
+    colorDesplegado.textContent = colorGanador;
+
+    // Desplegado de los nuevos colores elegidos
+    for(var i = 0; i < arregloCuadrados.length; i++){
+        // Ejecuta esta linea si existe un siguiente color a mostrar
+        if(colores[i]) { 
+            // Cambia el color de los primeros 3 cuadrados
+            arregloCuadrados[i].style.backgroundColor = colores[i]; 
+        }   else {
+            // Siguientes cuadrados los cambia al color del background
+            arregloCuadrados[i].style.display = 'none';
+        }
+
+    }
+
+
+});
+
+botonHARD.addEventListener('click', function(){
+    this.classList.add('seleccionado');
+    botonEZ.classList.remove('seleccionado');
+});
